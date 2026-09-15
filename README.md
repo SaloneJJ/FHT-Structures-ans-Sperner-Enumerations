@@ -14,7 +14,7 @@ These scripts rely on several Python libraries, including `Pynauty`, `networkX`,
 
 ## Mathematical Background
 
-The theoretical foundations, formal definitions, and mathematical properties underlying the hyper-tree fractals (FHTs) are detailed below.
+The theoretical foundations underlying the Fractal Hyper-Tree structure (FHT) are detailed below.
 
 <ins>**Definition of the Fractal Hyper-Tree Structure**</ins></br>
 Let $`\mathcal{F}`$ denote a Fractal Hyper-Tree (FHT) defined over a finite set of vertices $`V = \{v_1, v_2, \dots, v_{|V|}\}`$. It is structured as a graded family of hypergraph sets $`(\mathcal{H}_n)_{n=0}^N`$, where $`N \in \mathbb{N}`$ is a fixed maximum depth. For each level $`n`$, the set of hypergraphs is written as $`\mathcal{H}_n = \{H_{n,i}\}_{i \in I_n}`$, where each element is a pair $`H_{n,i} = (V_{n,i}, E_{n,i})`$ with $`V_{n,i} \subseteq V`$, and $I_n$ is a finite index set.
