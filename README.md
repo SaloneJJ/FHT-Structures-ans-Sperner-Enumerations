@@ -32,7 +32,7 @@ $$\exists H' \in \mathcal{H}_{n-1}, \quad \exists e \in E_H \quad \text{such tha
 **Hyperedge Non-Triviality:** </br>
 To prevent degenerate unary branching, for all $`n \in \{1, \dots, N\}`$, for every $`H \in \mathcal{H}_n`$, and for every hyperedge $`e \in E_H`$, the set $`C`$ of maximal lower-level hypergraphs strictly contained in $`e`$—defined as:
 
-$$C = \left\{lbrace H' \in \bigcup_{k=0}^{n-1} \mathcal{H}_k \;\middle|\; (V_{H'} \subsetneq e) \text{ and } ( \nexists H'' \in \bigcup_{k=0}^{n-1} \mathcal{H}_k \bigm| V_{H'} \subsetneq V_{H''} \subseteq e ) \right\}rbrace$$
+$$C = \left\lbrace H' \in \bigcup_{k=0}^{n-1} \mathcal{H}_k \;\middle|\; (V_{H'} \subsetneq e) \text{ and } \left( \nexists H'' \in \bigcup_{k=0}^{n-1} \mathcal{H}_k \;\bigm|\; V_{H'} \subsetneq V_{H''} \subseteq e \right) \right\rbrace$$
 
 satisfies the non-triviality condition of branching into at least two components: $`|C| \ge 2`$
 
