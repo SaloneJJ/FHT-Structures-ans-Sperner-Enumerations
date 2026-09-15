@@ -8,7 +8,7 @@ This release introduces complete enumeration capabilities for Fractal Hyper-Tree
 This repository provides computational frameworks to enumerate, classify, and analyze Finite Fractal Hyper-Trees (FHTs). 
 
 \begin{definition}[Finite Fractal Hyper-Tree Structure]
-Let $\mathcal{F}$ denote a Fractal Hyper-Tree (FHT) defined over a finite set of vertices $V = \{v_1, v_2, \dots, v_{|V|}\}$. It is structured as a graded family of hypergraph sets $(\mathcal{H}_n)_{n=0}^N$, where $N \in \mathbb{N}$ is a fixed maximum depth. For each level $n$, the set of hypergraphs is written as $\mathcal{H}_n = \{H_{n,i}\}_{i \in I_n}$, where each element is a pair $H_{n,i} = (V_{n,i}, E_{n,i})$ with $V_{n,i} \subseteq V$, and $I_n$ is a finite index set.
+Let $\mathcal{F}$ denote a Fractal Hyper-Tree (FHT) defined over a finite set of vertices $V = \{v_1, v_2, \dots, v_{|V|}\}$. It is structured as a graded family of hypergraph sets $(H_n)_{n=0}^N$, where $N \in \mathbb{N}$ is a fixed maximum depth. For each level $n$, the set of hypergraphs is written as $\mathcal{H}_n = \{H_{n,i}\}_{i \in I_n}$, where each element is a pair $H_{n,i} = (V_{n,i}, E_{n,i})$ with $V_{n,i} \subseteq V$, and $I_n$ is a finite index set.
 
 The family satisfies the following axiomatic conditions:
 
