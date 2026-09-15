@@ -45,11 +45,11 @@ $$C = \left\lbrace H' \in \bigcup_{k=0}^{n-1} \mathcal{H}_k \;\middle|\; (V_{H'}
 satisfies the non-triviality condition of branching into at least two components: $`|C| \ge 2`$
 
 ## Notes on the Enumeration Sequence
-The definition of these Fractal Hyper-Tree structures gives rise to **two distinct types of structures**, which are enumerated separately by the algorithms:
+The definition of these Fractal Hyper-Tree structures gives rise to two distinct types of structures, which are enumerated separately by the algorithms:
 
-* **Flat connected Sperner hypergraphs**, which are FHTs with complexity level 1.
-* **Hierarchically nested structures**, which are FHTs with a complexity level greater than 1.
-
+* **Flat connected Sperner hypergraphs**, which are FHTs with complexity level 1. Their number is counted in the algorithms by $S(n)$, where $n$ represents the number of vertices and $S$ denotes the counting function.
+* **Hierarchically nested structures**, which are FHTs with a complexity level greater than 1. Their number is counted by $I(n)$, where $n$ represents the number of vertices and $I$ denotes the counting function.
+Consequently, the total number of FHT structures is given by **$a(n) = S(n) + I(n)$**. It is this total sequence that is submitted to the OEIS, starting with the first terms: $1, 1, \dots$
 
 ## Key Features
 - **Rigorous Isomorphism Testing:** Relies on canonical labeling via `pynauty` to filter out isomorphic duplicates.
