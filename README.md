@@ -52,7 +52,7 @@ The definition of these Fractal Hyper-Tree structures gives rise to two distinct
 
 * **Flat connected Sperner hypergraphs**, which are FHTs with complexity level 1. Their number is counted in the algorithms by $S(n)$, where $n$ represents the number of vertices and $S$ denotes the counting function.
 * **Hierarchically nested structures**, which are FHTs with a complexity level greater than 1. Their number is counted by $I(n)$, where $n$ represents the number of vertices and $I$ denotes the counting function.</br>
-Consequently, the total number of FHT structures is given by **$a(n) = S(n) + I(n)$**. It is this total sequence that is submitted to the OEIS, starting with the first terms: $1, 1, \dots$
+Consequently, the total number of FHT structures is given by **$a(n) = S(n) + I(n)$**. It is this total sequence that is submitted to the OEIS, starting with the first terms: $1, 1, 4, 20, 187 \dots$
 
 ## Dependencies
 - Python 3.x
