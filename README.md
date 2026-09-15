@@ -3,12 +3,20 @@ Collection of Python scripts for generating and computing on hyper-tree fractals
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22163671.svg)](https://doi.org/10.5281/zenodo.22163671)
 
-## Overview
+## Overview and Key Features
 This collection of scripts performs various calculations on FHTs, which are formally defined in the next section. A brief overview of each script is provided below:</br>
-- The script "FHT_Enumeration_.ipynb" (v1.0.02) is used to generate and enumerate FHTs.</br>
-- The script "FHT_Enumeration_and_symetry.ipynb" (v2.0.0) introduces isomorphism computation procedures (invariant automorphism groups, orbits). </br>
+- The script "FHT_Enumeration_.ipynb" (v1.0.02) is used to generate and enumerate FHTs. It Computes exact recursive counts for structural hierarchies up to small-scale vertices.</br>
+- The script "FHT_Enumeration_and_symetry.ipynb" (v2.0.0) introduces isomorphism computation procedures (automorphism groups, invariant points and orbits). It relies on canonical labeling via `pynauty` to filter out isomorphic duplicates </br>
 - The script "FHT_Enumeration_Symmetry_and_Ultrametric.ipynb" (v3.0.0) computes also structure-specific metrics.</br>
 - The script "FHT_SaloneJJ.ipynb" (v1.0.0) is deprecated.
+
+## Key Features
+- **Rigorous Isomorphism Testing:** Relies on canonical labeling via `pynauty` to filter out isomorphic duplicates.
+- **Complete Symmetry Analysis:** Utilizes `pynauty.autgrp` to extract key algebraic metrics:
+  - Automorphism group size ($|\operatorname{Aut}(H)|$)
+  - Total number of vertex orbits ($k$)
+  - Invariant points (fixed points under symmetry)
+- **Automated Decomposition:** Computes exact recursive counts for structural hierarchies up to small-scale vertices.
 
 ## Mathematical Background
 
@@ -48,16 +56,8 @@ satisfies the non-triviality condition of branching into at least two components
 The definition of these Fractal Hyper-Tree structures gives rise to two distinct types of structures, which are enumerated separately by the algorithms:
 
 * **Flat connected Sperner hypergraphs**, which are FHTs with complexity level 1. Their number is counted in the algorithms by $S(n)$, where $n$ represents the number of vertices and $S$ denotes the counting function.
-* **Hierarchically nested structures**, which are FHTs with a complexity level greater than 1. Their number is counted by $I(n)$, where $n$ represents the number of vertices and $I$ denotes the counting function.
+* **Hierarchically nested structures**, which are FHTs with a complexity level greater than 1. Their number is counted by $I(n)$, where $n$ represents the number of vertices and $I$ denotes the counting function.</br>
 Consequently, the total number of FHT structures is given by **$a(n) = S(n) + I(n)$**. It is this total sequence that is submitted to the OEIS, starting with the first terms: $1, 1, \dots$
-
-## Key Features
-- **Rigorous Isomorphism Testing:** Relies on canonical labeling via `pynauty` to filter out isomorphic duplicates.
-- **Complete Symmetry Analysis:** Utilizes `pynauty.autgrp` to extract key algebraic metrics:
-  - Automorphism group size ($|\operatorname{Aut}(H)|$)
-  - Total number of vertex orbits ($k$)
-  - Invariant points (fixed points under symmetry)
-- **Automated Decomposition:** Computes exact recursive counts for structural hierarchies up to small-scale vertices.
 
 ## Dependencies
 - Python 3.x
