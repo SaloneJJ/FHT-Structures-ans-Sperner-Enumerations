@@ -4,9 +4,9 @@ Collection of Python scripts for generating and computing on hyper-tree fractals
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22163671.svg)](https://doi.org/10.5281/zenodo.22163671)
 
 ## Overview
-Script 1 is used to generate and enumerate FHTs. 
-Script 2 introduces isomorphism computation procedures (invariant automorphism groups, orbits). 
-Script 3 computes structure-specific metrics.
+Script "FHT_Enumeration_.ipynb" (v1.0.02) is used to generate and enumerate FHTs.</br>
+Script "FHT_Enumeration_and_symetry.ipynb" (v2.0.0) introduces isomorphism computation procedures (invariant automorphism groups, orbits). </br>
+Script "FHT_Enumeration_Symmetry_and_Ultrametric.ipynb" (v3.0.0) computes also structure-specific metrics.</br>
 
 <ins>**Finite Fractal Hyper-Tree Structure**</ins></br>
 Let $`\mathcal{F}`$ denote a Fractal Hyper-Tree (FHT) defined over a finite set of vertices $`V = \{v_1, v_2, \dots, v_{|V|}\}`$. It is structured as a graded family of hypergraph sets $`(\mathcal{H}_n)_{n=0}^N`$, where $`N \in \mathbb{N}`$ is a fixed maximum depth. For each level $`n`$, the set of hypergraphs is written as $`\mathcal{H}_n = \{H_{n,i}\}_{i \in I_n}`$, where each element is a pair $`H_{n,i} = (V_{n,i}, E_{n,i})`$ with $`V_{n,i} \subseteq V`$, and $I_n$ is a finite index set.
