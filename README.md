@@ -15,7 +15,9 @@ For each level $`n \in \{0, \dots, N\}`$, the set $`\mathcal{H}_n = \{H_{n,i}\}_
 **Top-Level Singularity and Connectedness:** </br>
 At the maximum depth level $`N`$, the set $`\mathcal{H}_N`$ consists of a single hypergraph $`H_{N,1} = (V, E_{N,1})`$ whose vertex set spans the entire space $`V`$, and this top-level hypergraph is edge-path connected.</br>
 **Base Level Structure:** The base level $`\mathcal{H}_0 = \{H_{0,i}\}_{i \in I_0}`$ partitions the base elements into trivial singleton hypergraphs. Specifically, for each element $`v \in V`$, there exists a corresponding base hypergraph $`H_{0,i} = (\{v\}, \{\{v\}\})`$, such that the union of all base vertex sets recovers $`V`$:
+
 $$\bigcup_{i \in I_0} V_{0,i} = V$$
+
 **Fractal Inclusion:** This axiom defines the specific structural class of FHTs by prohibiting partial intersections: for each level $`n \in \{1, \dots, N\}`$, for every $`H \in \mathcal{H}_n`$, for every $`e \in E_H`$, and for every $`H' \in \mathcal{H}_k`$ with $`0 \le k < n`$, if the hyperedge $`e`$ intersects the vertex set $`V_{H'}`$ ($`e \cap V_{H'} \neq \emptyset`$), then $`e`$ must strictly contain the entire vertex set $`V_{H'}`$:
     $$`e \cap V_{H'} \neq \emptyset \implies V_{H'} \subsetneq e`$$</br>
 **Hierarchical Filiation:**  For any level $`n \in \{1, \dots, N\}`$ and each $`H \in \mathcal{H}_n`$, there exists a lower-level hypergraph $`H' \in \mathcal{H}_{n-1}`$ and at least one hyperedge $`e \in E_H`$ such that the entire vertex set of $`H'`$ is strictly contained within $`e`$:</br>
