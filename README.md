@@ -22,17 +22,17 @@ $$\bigcup_{i \in I_0} V_{0,i} = V$$
 **Fractal Inclusion:** </br>
 This axiom defines the specific structural class of FHTs by prohibiting partial intersections: for each level $`n \in \{1, \dots, N\}`$, for every $`H \in \mathcal{H}_n`$, for every $`e \in E_H`$, and for every $`H' \in \mathcal{H}_k`$ with $`0 \le k < n`$, if the hyperedge $`e`$ intersects the vertex set $`V_{H'}`$ ($`e \cap V_{H'} \neq \emptyset`$), then $`e`$ must strictly contain the entire vertex set $`V_{H'}`$:
 
-    $$e \cap V_{H'} \neq \emptyset \implies V_{H'} \subsetneq e$$
-    
+$$e \cap V_{H'} \neq \emptyset \implies V_{H'} \subsetneq e$$
+
 **Hierarchical Filiation:** </br>
 For any level $`n \in \{1, \dots, N\}`$ and each $`H \in \mathcal{H}_n`$, there exists a lower-level hypergraph $`H' \in \mathcal{H}_{n-1}`$ and at least one hyperedge $`e \in E_H`$ such that the entire vertex set of $`H'`$ is strictly contained within $`e`$:
 
-    $$\exists H' \in \mathcal{H}_{n-1}, \quad \exists e \in E_H \quad \text{such that} \quad V_{H'} \subsetneq e$$
-    
+$$\exists H' \in \mathcal{H}_{n-1}, \quad \exists e \in E_H \quad \text{such that} \quad V_{H'} \subsetneq e$$
+
 **Hyperedge Non-Triviality:** </br>
 To prevent degenerate unary branching, for all $`n \in \{1, \dots, N\}`$, for every $`H \in \mathcal{H}_n`$, and for every hyperedge $`e \in E_H`$, the set $`C`$ of maximal lower-level hypergraphs strictly contained in $`e`$—defined as:
 
-    $$C = \left\{ H' \in \bigcup_{k=0}^{n-1} \mathcal{H}_k \;\middle|\; (V_{H'} \subsetneq e) \text{ and } ( \nexists H'' \in \bigcup_{k=0}^{n-1} \mathcal{H}_k \bigm| V_{H'} \subsetneq V_{H''} \subseteq e ) \right\}$$
+$$C = \left\{ H' \in \bigcup_{k=0}^{n-1} \mathcal{H}_k \;\middle|\; (V_{H'} \subsetneq e) \text{ and } ( \nexists H'' \in \bigcup_{k=0}^{n-1} \mathcal{H}_k \bigm| V_{H'} \subsetneq V_{H''} \subseteq e ) \right\}$$
 
 satisfies the non-triviality condition of branching into at least two components: $`|C| \ge 2`$
 
