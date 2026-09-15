@@ -4,11 +4,17 @@ Collection of Python scripts for generating and computing on hyper-tree fractals
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22163671.svg)](https://doi.org/10.5281/zenodo.22163671)
 
 ## Overview
-Script "FHT_Enumeration_.ipynb" (v1.0.02) is used to generate and enumerate FHTs.</br>
-Script "FHT_Enumeration_and_symetry.ipynb" (v2.0.0) introduces isomorphism computation procedures (invariant automorphism groups, orbits). </br>
-Script "FHT_Enumeration_Symmetry_and_Ultrametric.ipynb" (v3.0.0) computes also structure-specific metrics.</br>
+This collection of scripts performs various calculations on FHTs, which are formally defined in the next section. A brief overview of each script is provided below:</br>
+The script "FHT_Enumeration_.ipynb" (v1.0.02) is used to generate and enumerate FHTs.</br>
+The script "FHT_Enumeration_and_symetry.ipynb" (v2.0.0) introduces isomorphism computation procedures (invariant automorphism groups, orbits). </br>
+The script "FHT_Enumeration_Symmetry_and_Ultrametric.ipynb" (v3.0.0) computes also structure-specific metrics.</br>
+The script "FHT_SaloneJJ.ipynb" (v1.0.0) is deprecated.
 
-<ins>**Finite Fractal Hyper-Tree Structure**</ins></br>
+## Mathematical Background
+
+The theoretical foundations, formal definitions, and mathematical properties underlying the hyper-tree fractals (FHTs) are detailed below.
+
+<ins>**Definition of the Fractal Hyper-Tree Structure**</ins></br>
 Let $`\mathcal{F}`$ denote a Fractal Hyper-Tree (FHT) defined over a finite set of vertices $`V = \{v_1, v_2, \dots, v_{|V|}\}`$. It is structured as a graded family of hypergraph sets $`(\mathcal{H}_n)_{n=0}^N`$, where $`N \in \mathbb{N}`$ is a fixed maximum depth. For each level $`n`$, the set of hypergraphs is written as $`\mathcal{H}_n = \{H_{n,i}\}_{i \in I_n}`$, where each element is a pair $`H_{n,i} = (V_{n,i}, E_{n,i})`$ with $`V_{n,i} \subseteq V`$, and $I_n$ is a finite index set.
 
 The family satisfies the following axiomatic conditions:</br>
@@ -38,8 +44,12 @@ $$C = \left\lbrace H' \in \bigcup_{k=0}^{n-1} \mathcal{H}_k \;\middle|\; (V_{H'}
 
 satisfies the non-triviality condition of branching into at least two components: $`|C| \ge 2`$
 
+## Notes on the Enumeration Sequence
+The definition of these Fractal Hyper-Tree structures gives rise to **two distinct types of structures**, which are enumerated separately by the algorithms:
 
-It covers both **flat Sperner hypergraph topologies ($S(v)$)** and **hierarchical imbricated structures ($I(v)$)** through formal integer partition compositions.
+* **Flat connected Sperner hypergraphs**, which are FHTs with complexity level 1.
+* **Hierarchically nested structures**, which are FHTs with a complexity level greater than 1.
+
 
 ## Key Features
 - **Rigorous Isomorphism Testing:** Relies on canonical labeling via `pynauty` to filter out isomorphic duplicates.
