@@ -11,14 +11,6 @@ This collection of scripts performs various calculations on FHTs, which are form
 - The script "FHT_SaloneJJ.ipynb" (v1.0.0) is deprecated.</br>
 These scripts rely on several Python libraries, including `Pynauty`, 'NetworkX',`itertools` and 'collection'.
 
-## Key Features
-- **Rigorous Isomorphism Testing:** Relies on canonical labeling via `pynauty` to filter out isomorphic duplicates.
-- **Complete Symmetry Analysis:** Utilizes `pynauty.autgrp` to extract key algebraic metrics:
-  - Automorphism group size ($|\operatorname{Aut}(H)|$)
-  - Total number of vertex orbits ($k$)
-  - Invariant points (fixed points under symmetry)
-- **Automated Decomposition:** Computes exact recursive counts for structural hierarchies up to small-scale vertices.
-
 ## Mathematical Background
 
 The theoretical foundations, formal definitions, and mathematical properties underlying the hyper-tree fractals (FHTs) are detailed below.
