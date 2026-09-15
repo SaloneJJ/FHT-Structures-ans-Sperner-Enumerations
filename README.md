@@ -1,5 +1,5 @@
-# FHT-Structures-and-Sperner-Enumerations
-Python scripts for the exact enumeration, structural generation, symmetry analysis and metric properties of Fractal Hyper-Tree (FHT) structures.
+# Fractal Hyper-Tree Structures
+Collection of Python scripts for generating and performing calculations on hyper-tree fractals.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22163671.svg)](https://doi.org/10.5281/zenodo.22163671)
 
