@@ -5,10 +5,10 @@ Collection of Python scripts for generating and computing on hyper-tree fractals
 
 ## Overview
 This collection of scripts performs various calculations on FHTs, which are formally defined in the next section. A brief overview of each script is provided below:</br>
-The script "FHT_Enumeration_.ipynb" (v1.0.02) is used to generate and enumerate FHTs.</br>
-The script "FHT_Enumeration_and_symetry.ipynb" (v2.0.0) introduces isomorphism computation procedures (invariant automorphism groups, orbits). </br>
-The script "FHT_Enumeration_Symmetry_and_Ultrametric.ipynb" (v3.0.0) computes also structure-specific metrics.</br>
-The script "FHT_SaloneJJ.ipynb" (v1.0.0) is deprecated.
+- The script "FHT_Enumeration_.ipynb" (v1.0.02) is used to generate and enumerate FHTs.</br>
+- The script "FHT_Enumeration_and_symetry.ipynb" (v2.0.0) introduces isomorphism computation procedures (invariant automorphism groups, orbits). </br>
+- The script "FHT_Enumeration_Symmetry_and_Ultrametric.ipynb" (v3.0.0) computes also structure-specific metrics.</br>
+- The script "FHT_SaloneJJ.ipynb" (v1.0.0) is deprecated.
 
 ## Mathematical Background
 
