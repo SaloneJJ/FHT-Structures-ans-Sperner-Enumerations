@@ -7,14 +7,38 @@ This release introduces complete enumeration capabilities for Fractal Hyper-Tree
 ## Overview
 This repository provides computational frameworks to enumerate, classify, and analyze Finite Fractal Hyper-Trees (FHTs). 
 
-Definition 1 (Finite Fractal Hyper-Tree Structure).  Let  denote a Fractal Hyper-Tree (FHT) defined over a finite set of vertices . It is structured as a graded family of hypergraph sets , where  is a fixed maximum depth. For each level , the set of hypergraphs is written as , where each element is a pair  with , and  is a finite index set.
+\begin{definition}[Finite Fractal Hyper-Tree Structure]
+Let $\mathcal{F}$ denote a Fractal Hyper-Tree (FHT) defined over a finite set of vertices $V = \{v_1, v_2, \dots, v_{|V|}\}$. It is structured as a graded family of hypergraph sets $(\mathcal{H}_n)_{n=0}^N$, where $N \in \mathbb{N}$ is a fixed maximum depth. For each level $n$, the set of hypergraphs is written as $\mathcal{H}_n = \{H_{n,i}\}_{i \in I_n}$, where each element is a pair $H_{n,i} = (V_{n,i}, E_{n,i})$ with $V_{n,i} \subseteq V$, and $I_n$ is a finite index set.
+
 The family satisfies the following axiomatic conditions:
-Partition by Connected Components: For each level , the set  consists of hypergraphs  that correspond precisely to the disjoint connected components of the structure at level . Here, connectedness is defined in terms of edge-path connectedness: two vertices  are connected if there exists a sequence of hyperedges  such that , , and  for all . Each  captures one such maximal connected component.
-Top-Level Singularity and Connectedness: At the maximum depth level , the set  consists of a single hypergraph  whose vertex set spans the entire space , and this top-level hypergraph is edge-path connected.
-Base Level Structure: The base level  partitions the base elements into trivial singleton hypergraphs. Specifically, for each element , there exists a corresponding base hypergraph , such that the union of all base vertex sets recovers : 
-Fractal Inclusion (Strict Hierarchy): This axiom defines the specific structural class of FHTs by prohibiting partial intersections: for each level , for every , for every , and for every  with , if the hyperedge  intersects the vertex set  (), then  must strictly contain the entire vertex set : 
-Hierarchical Filiation: For any level  and each , there exists a lower-level hypergraph  and at least one hyperedge  such that the entire vertex set of  is strictly contained within : 
-Hyperedge Non-Triviality (Maximal Children Coverage): To prevent degenerate unary branching, for all , for every , and for every hyperedge , the set  of maximal lower-level hypergraphs strictly contained in —defined as: $$C = \left\{ H' \in \bigcup_{k=0}^{n-1} \mathcal{H}_k \;\middle|\; (V_{H'} \subsetneq e) \text{ and } ( \nexists H'' \in \bigcup_{k=0}^{n-1} \mathcal{H}_k \bigm| V_{H'} \subsetneq V_{H''} \subseteq e ) \right\}$$ satisfies the non-triviality condition of branching into at least two components: 
+
+\begin{enumerate}
+    \item[(i)] \textbf{Partition by Connected Components:}  
+    For each level $n \in \{0, \dots, N\}$, the set $\mathcal{H}_n = \{H_{n,i}\}_{i \in I_n}$ consists of hypergraphs $H_{n,i}$ that correspond precisely to the disjoint connected components of the structure at level $n$. Here, connectedness is defined in terms of edge-path connectedness: two vertices $x, y \in V_{n,i}$ are connected if there exists a sequence of hyperedges $(e_1, \dots, e_k) \in E_{n,i}^k$ such that $x \in e_1$, $y \in e_k$, and $e_j \cap e_{j+1} \neq \emptyset$ for all $j \in \{1, \dots, k-1\}$. Each $H_{n,i}$ captures one such maximal connected component.
+
+    \item[(ii)] \textbf{Top-Level Singularity and Connectedness:}  
+    At the maximum depth level $N$, the set $\mathcal{H}_N$ consists of a single hypergraph $H_{N,1} = (V, E_{N,1})$ whose vertex set spans the entire space $V$, and this top-level hypergraph is edge-path connected.
+
+    \item[(iii)] \textbf{Base Level Structure:}  
+    The base level $\mathcal{H}_0 = \{H_{0,i}\}_{i \in I_0}$ partitions the base elements into trivial singleton hypergraphs. Specifically, for each element $v \in V$, there exists a corresponding base hypergraph $H_{0,i} = (\{v\}, \{\{v\}\})$, such that the union of all base vertex sets recovers $V$:
+    $$\bigcup_{i \in I_0} V_{0,i} = V$$
+
+    \item[(iv)] \textbf{Fractal Inclusion (Strict Hierarchy):}  
+    This axiom defines the specific structural class of FHTs by prohibiting partial intersections: for each level $n \in \{1, \dots, N\}$, for every $H \in \mathcal{H}_n$, for every $e \in E_H$, and for every $H' \in \mathcal{H}_k$ with $0 \le k < n$, if the hyperedge $e$ intersects the vertex set $V_{H'}$ ($e \cap V_{H'} \neq \emptyset$), then $e$ must strictly contain the entire vertex set $V_{H'}$:
+    $$e \cap V_{H'} \neq \emptyset \implies V_{H'} \subsetneq e$$
+
+    \item[(v)] \textbf{Hierarchical Filiation:}  
+    For any level $n \in \{1, \dots, N\}$ and each $H \in \mathcal{H}_n$, there exists a lower-level hypergraph $H' \in \mathcal{H}_{n-1}$ and at least one hyperedge $e \in E_H$ such that the entire vertex set of $H'$ is strictly contained within $e$:
+    $$\exists H' \in \mathcal{H}_{n-1}, \quad \exists e \in E_H \quad \text{such that} \quad V_{H'} \subsetneq e$$
+
+    \item[(vi)] \textbf{Hyperedge Non-Triviality (Maximal Children Coverage):}  
+    To prevent degenerate unary branching, for all $n \in \{1, \dots, N\}$, for every $H \in \mathcal{H}_n$, and for every hyperedge $e \in E_H$, the set $C$ of maximal lower-level hypergraphs strictly contained in $e$—defined as:
+    $$C = \left\{ H' \in \bigcup_{k=0}^{n-1} \mathcal{H}_k \;\middle|\; (V_{H'} \subsetneq e) \text{ and } ( \nexists H'' \in \bigcup_{k=0}^{n-1} \mathcal{H}_k \bigm| V_{H'} \subsetneq V_{H''} \subseteq e ) \right\}$$
+    satisfies the non-triviality condition of branching into at least two components:
+    $$|C| \ge 2$$
+    
+\end{enumerate}
+\end{definition}
 
 It covers both **flat Sperner hypergraph topologies ($S(v)$)** and **hierarchical imbricated structures ($I(v)$)** through formal integer partition compositions.
 
