@@ -1,7 +1,7 @@
 # Fractal Hyper-Tree Structures
 Collection of Python scripts for generating and computing on Fractal Hyper-Tree structures.
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.22770767)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22770767.svg)]
 
 ## Overview and Key Features
 Fractal Hyper-Trees (FHT) are formally defined in the next section. </br>
