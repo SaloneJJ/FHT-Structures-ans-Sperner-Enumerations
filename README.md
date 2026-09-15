@@ -9,6 +9,7 @@ This collection of scripts performs various calculations on FHTs, which are form
 - The script "FHT_Enumeration_and_symetry.ipynb" (v2.0.0) introduces isomorphism computation procedures (automorphism groups, invariant points and orbits). </br>
 - The script "FHT_Enumeration_Symmetry_and_Ultrametric.ipynb" (v3.0.0) computes also structure-specific metrics.</br>
 - The script "FHT_SaloneJJ.ipynb" (v1.0.0) is deprecated.</br>
+
 These scripts rely on several Python libraries, including `Pynauty`, 'NetworkX',`itertools` and 'collection'.
 
 ## Mathematical Background
