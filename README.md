@@ -1,6 +1,8 @@
 # Fractal Hyper-Trees (FHT) — enumeration, symmetries, renormalized ultrametric
 
 Code accompanying the preprint *Fractal Hyper-Trees: ...* (J.-J. Salone, 2026).
+[![DOI](https://zenodo.org/badge/1350712518.svg)](https://doi.org/10.5281/zenodo.22163670)
+Version 4.0.0: doi:10.5281/zenodo.22948863
 
 ## Installation
     python3 -m pip install -r requirements.txt
