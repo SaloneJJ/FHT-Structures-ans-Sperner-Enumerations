@@ -6,6 +6,7 @@ authors:
     orcid: "https://orcid.org/0009-0001-1033-5694"
     affiliation: "CRREF (EA 4538), Université des Antilles"
 version: 4.0.0
-date-released: 2026-09-XX
+doi: 10.5281/zenodo.22948863
+date-released: 2026-09-24
 license: MIT
 repository-code: "https://github.com/SaloneJJ/FHT-Structures-and-Sperner-Enumerations"
